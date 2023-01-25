@@ -1,0 +1,51 @@
+const introducer = (name,shirt) => {
+// use temp literals
+    const person = {
+        name: name,
+        shirt: shirt
+    }   
+    const intro =`Hi my name is ${person.name} and the color of my shirt is ${person.shirt}`
+    
+    return intro
+}
+
+
+const introducer = (name, shirt) => {
+    const person = {
+        name: name,
+        shirt: shirt,
+        assets: 100000,
+        liabilities: 50000,
+    }
+
+        const intro = `Hi, my name is ${person.name} and the color of my shirt is ${person.shirt} and my networth is ${person.assets - person.liabilities}`
+
+    return intro
+}
+
+console.log(introducer('Anto', 'Green'))
+
+
+
+const introducer = (name, shirt) => {
+    const person = {
+        name: name,
+        shirt: shirt,
+        assets: 100000,
+        liabilities: 50000,
+        // storing a func inside a object
+        netWorth: function () {
+            return this.assets - this.liabilities
+        }
+    }
+
+        const intro = `Hi, my name is ${person.name} and the color of my shirt is ${person.shirt} and my networth is ${person.netWorth()} Ksh`
+
+    return intro
+}
+
+console.log(introducer('Anto', 'Green'))
+VM1499:18 Hi, my name is Anto and the color of my shirt is Green and my networth is 50000 Ksh
+
+
+
